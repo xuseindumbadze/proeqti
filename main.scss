@@ -8,8 +8,8 @@
 
 $bgcolor: #fafafa;
 $hbgcolor: #f2f1f0;
-$font:Arial,Helvetica;
-$pad:30px;
+$font: Arial, Helvetica;
+$pad: 30px;
 
 body {
     padding: 30px;
@@ -20,6 +20,7 @@ body {
         width: 100%;
         top: 0;
         left: 0;
+
         .firstheader {
             display: flex;
             justify-content: space-between;
@@ -55,7 +56,8 @@ body {
             justify-content: space-between;
             padding: 20px;
             background-color: #f2f1f0;
-            p{
+
+            p {
                 font-size: 2rem;
                 font-family: $font;
             }
@@ -86,33 +88,39 @@ body {
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        h1{
+
+        h1 {
             font-size: 6rem;
             color: #fff;
-            font-family:$font;
+            font-family: $font;
         }
-        p{
+
+        p {
             margin-top: 10px;
             color: white;
             font-size: 2rem;
         }
-        a{
+
+        a {
             background-color: black;
-            padding:15px 50px;
+            padding: 15px 50px;
             text-decoration: none;
             transition: 0.4s;
             margin-top: 70px;
-            &:hover{
+
+            &:hover {
                 background-color: rgb(170, 137, 76)
             }
-            span{
+
+            span {
                 color: #fff;
 
             }
         }
 
     }
-    .box{
+
+    .box {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -121,32 +129,34 @@ body {
         background-color: white;
         margin: 9px 0;
 
-        h2{
+        h2 {
             font-size: 2rem;
         }
-        p{
-            margin:20px 0;
+
+        p {
+            margin: 20px 0;
             font-family: $font;
             text-align: center;
         }
     }
+
     // header done.
     // products.
-    .products{
+    .products {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
         gap: 15px;
-        
 
-        .box{
+
+        .box {
             display: flex;
             align-items: center;
             justify-content: center;
             background-color: $hbgcolor;
 
-            
-            a{
+
+            a {
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -154,47 +164,171 @@ body {
                 text-decoration: none;
                 gap: 8px;
 
-                span{
+                span {
                     font-size: 1.2rem;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     flex-flow: column;
-                    color:black;
+                    color: black;
                     gap: 3px;
-                    .span{
+
+                    .span {
                         color: gray;
                     }
                 }
             }
 
-            img{
+            img {
                 height: 300px;
             }
         }
-     
+
     }
 
-    .regist{
+    .regist {
         margin-top: 40px;
-        min-height: 65vh;
+        min-height: 85vh;
         background-color: #fff;
-        padding: $pad;
+        padding: 50px;
         font-size: 1.3rem;
         display: flex;
-        .info{
-            display: flex;
-            justify-content: space-between;
-            flex-flow: column;
-            min-height: auto;
+        justify-content: space-between;
 
-            .child3{
+        .info {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-flow: column;
+            margin-left: 50px;
+            
+            .child1{
                 a{
                     text-decoration: none;
                     color: black;
                 }
             }
 
+            .child3 {
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+
         }
+    }
+
+    .data {
+        display: flex;
+        flex-flow: column;
+        gap: 50px;
+        .perent {
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+            
+
+            .text1 {
+                display: flex;
+                flex-flow: column;
+            }
+
+            .text2 {
+                display: flex;
+                flex-flow: column;
+            }
+
+            input {
+                border-left: none;
+                border-top: none;
+                border-right: none;
+                width: 290px;
+                height: 70px;
+                outline: none;
+
+            }
+
+        }
+
+        .perent2 {
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+            margin-top: 50px;
+
+            .text3 {
+                display: flex;
+                flex-flow: column;
+            }
+
+            .text4 {
+                display: flex;
+                flex-flow: column;
+            }
+
+            input {
+                border-left: none;
+                border-top: none;
+                border-right: none;
+                width: 290px;
+                height: 70px;
+                outline: none;
+            }
+        }
+
+        .text5 {
+            display: flex;
+            flex-flow: column;
+            margin-top: 50px;
+
+            textarea{
+                border-left: none;
+                border-top: none;
+                border-right: none;
+                height: 70px;
+                outline: none;
+            }
+            button{
+                border: 0;
+                height: 2rem;
+                font-size: 1.3rem;
+                background-color: #fff;
+                padding: 30px;
+            }
+        }
+        .text6{
+            display: flex;
+            flex-flow: column;
+            input{
+                margin-top: 20px;
+                height: 40px;
+            }
+        }
+
+        .text7{
+            display: flex;
+            margin-top:15px;
+            gap: 20px;
+
+            input{
+                width: 15px;
+                height: 15px;
+            }
+
+            button{
+                background-color: black;
+                color: white;
+                margin-left: 30px;
+                padding: 10px 30px;
+                font-size: 1.2rem;
+                border: 0;
+                
+                &:hover{
+                    background-color: #967e54;
+                }
+            }
+        }
+
     }
 }

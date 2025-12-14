@@ -146,19 +146,120 @@ body .products .box img {
 }
 body .regist {
   margin-top: 40px;
-  min-height: 65vh;
+  min-height: 85vh;
   background-color: #fff;
-  padding: 30px;
+  padding: 50px;
   font-size: 1.3rem;
   display: flex;
+  justify-content: space-between;
 }
 body .regist .info {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: space-evenly;
   flex-flow: column;
-  min-height: auto;
+  margin-left: 50px;
+}
+body .regist .info .child1 a {
+  text-decoration: none;
+  color: black;
 }
 body .regist .info .child3 a {
   text-decoration: none;
   color: black;
+}
+body .data {
+  display: flex;
+  flex-flow: column;
+  gap: 50px;
+}
+body .data .perent {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+body .data .perent .text1 {
+  display: flex;
+  flex-flow: column;
+}
+body .data .perent .text2 {
+  display: flex;
+  flex-flow: column;
+}
+body .data .perent input {
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  width: 290px;
+  height: 70px;
+  outline: none;
+}
+body .data .perent2 {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  margin-top: 50px;
+}
+body .data .perent2 .text3 {
+  display: flex;
+  flex-flow: column;
+}
+body .data .perent2 .text4 {
+  display: flex;
+  flex-flow: column;
+}
+body .data .perent2 input {
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  width: 290px;
+  height: 70px;
+  outline: none;
+}
+body .data .text5 {
+  display: flex;
+  flex-flow: column;
+  margin-top: 50px;
+}
+body .data .text5 textarea {
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  height: 70px;
+  outline: none;
+}
+body .data .text5 button {
+  border: 0;
+  height: 2rem;
+  font-size: 1.3rem;
+  background-color: #fff;
+  padding: 30px;
+}
+body .data .text6 {
+  display: flex;
+  flex-flow: column;
+}
+body .data .text6 input {
+  margin-top: 20px;
+  height: 40px;
+}
+body .data .text7 {
+  display: flex;
+  margin-top: 15px;
+  gap: 20px;
+}
+body .data .text7 input {
+  width: 15px;
+  height: 15px;
+}
+body .data .text7 button {
+  background-color: black;
+  color: white;
+  margin-left: 30px;
+  padding: 10px 30px;
+  font-size: 1.2rem;
+  border: 0;
+}
+body .data .text7 button:hover {
+  background-color: #967e54;
 }/*# sourceMappingURL=main.css.map */
