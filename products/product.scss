@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+$bgcolor: #fafafa;
+$hbgcolor: #f2f1f0;
+$font: Arial, Helvetica;
+$pad: 30px;
+$fonts: "Fredericka the Great", serif;
+$fontweight: 400;
+$font-style: normal;
+$maxwidth: 1350px;
+
+body {
+  background-color: $hbgcolor;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  .leader {
+    max-width: $maxwidth;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+
+
+
+    .firstheader {
+      display: flex;
+      justify-content: space-between;
+      background-color: $bgcolor;
+      padding: 13px;
+
+
+      .input {
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+
+        .search {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        input {
+          border: 0;
+          background-color: transparent;
+        }
+      }
+
+
+      button {
+        font-size: 1.5rem;
+        border: 0;
+        height: 2rem;
+        background-color: transparent;
+      }
+
+      .secondheader {
+        display: flex;
+        gap: 30px;
+        max-width: 180px;
+        width: 100%;
+
+        button {
+          display: flex;
+          gap: 10px;
+        }
+
+        .svgs {
+          max-width: 40px;
+          max-height: 40px;
+
+          .uefa {
+            font-size: 70px;
+          }
+        }
+      }
+
+
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px;
+      background-color: #f2f1f0;
+
+      p {
+        font-size: 2rem;
+        font-family: $font;
+      }
+
+      ul {
+        display: flex;
+
+        li {
+          margin: 15px;
+
+          a {
+            text-decoration: none;
+            font-size: 20px;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+
+
+  //..........
+
+
+  .shop {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 140px;
+    max-width: $maxwidth ;
+    width: 100%;
+
+    .aside {
+      display: flex;
+      align-items: start;
+      justify-content: start;
+    }
+
+
+    .tato {
+      display: grid;
+      grid-template-columns:2, 1fr;
+      gap: 40px;
+      align-items: start;
+
+      main {
+        width: 100%;
+
+        ul {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 30px;
+          li{
+            display: flex;
+
+            a{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+
+              span{
+                color: black;
+              }
+
+            }
+          }
+
+          .box {
+            display: flex;
+          }
+        }
+
+        img {
+          max-width: 400px;
+          width: 100%;
+        }
+      }
+    }
+
+  }
+}

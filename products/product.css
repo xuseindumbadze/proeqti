@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  background-color: #f2f1f0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+body .leader {
+  max-width: 1350px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+body .leader .firstheader {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fafafa;
+  padding: 13px;
+}
+body .leader .firstheader .input {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+}
+body .leader .firstheader .input .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .leader .firstheader .input input {
+  border: 0;
+  background-color: transparent;
+}
+body .leader .firstheader button {
+  font-size: 1.5rem;
+  border: 0;
+  height: 2rem;
+  background-color: transparent;
+}
+body .leader .firstheader .secondheader {
+  display: flex;
+  gap: 30px;
+  max-width: 180px;
+  width: 100%;
+}
+body .leader .firstheader .secondheader button {
+  display: flex;
+  gap: 10px;
+}
+body .leader .firstheader .secondheader .svgs {
+  max-width: 40px;
+  max-height: 40px;
+}
+body .leader .firstheader .secondheader .svgs .uefa {
+  font-size: 70px;
+}
+body .leader .header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #f2f1f0;
+}
+body .leader .header p {
+  font-size: 2rem;
+  font-family: Arial, Helvetica;
+}
+body .leader .header ul {
+  display: flex;
+}
+body .leader .header ul li {
+  margin: 15px;
+}
+body .leader .header ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+}
+body .shop {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 140px;
+  max-width: 1350px;
+  width: 100%;
+}
+body .shop .aside {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+}
+body .shop .tato {
+  display: grid;
+  grid-template-columns: 2, 1fr;
+  gap: 40px;
+  align-items: start;
+}
+body .shop .tato main {
+  width: 100%;
+}
+body .shop .tato main ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+body .shop .tato main ul li {
+  display: flex;
+}
+body .shop .tato main ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body .shop .tato main ul li a span {
+  color: black;
+}
+body .shop .tato main ul .box {
+  display: flex;
+}
+body .shop .tato main img {
+  max-width: 400px;
+  width: 100%;
+}/*# sourceMappingURL=product.css.map */

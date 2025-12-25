@@ -4,28 +4,37 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
+  font-family: Arial, sans-serif;
 }
 
 body {
-  padding: 30px;
   background-color: #f2f1f0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
 }
 body .leader {
-  position: fixed;
+  max-width: 1350px;
   width: 100%;
+  position: fixed;
   top: 0;
-  left: 0;
 }
 body .leader .firstheader {
   display: flex;
   justify-content: space-between;
   background-color: #fafafa;
-  padding: 30px;
+  padding: 13px;
 }
 body .leader .firstheader .input {
   display: flex;
   align-items: center;
   font-size: 1.5rem;
+}
+body .leader .firstheader .input .search {
+  display: flex;
+  justify-self: center;
+  align-items: center;
 }
 body .leader .firstheader .input input {
   border: 0;
@@ -37,10 +46,27 @@ body .leader .firstheader button {
   height: 2rem;
   background-color: transparent;
 }
+body .leader .firstheader .secondheader {
+  display: flex;
+  gap: 30px;
+  max-width: 180px;
+  width: 100%;
+}
+body .leader .firstheader .secondheader button {
+  display: flex;
+  gap: 10px;
+}
+body .leader .firstheader .secondheader .svgs {
+  max-width: 40px;
+  max-height: 40px;
+}
+body .leader .firstheader .secondheader .svgs .uefa {
+  font-size: 70px;
+}
 body .leader .header {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 15px;
   background-color: #f2f1f0;
 }
 body .leader .header p {
@@ -63,7 +89,9 @@ body .img {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
+  max-width: 1350px;
+  width: 100%;
   background-image: url(../images/d01231e46af34161be7ad101d281a441.avif);
   background-repeat: no-repeat;
   background-position: center;
@@ -98,6 +126,8 @@ body .box {
   justify-content: center;
   flex-flow: column;
   height: 40vh;
+  max-width: 1350px;
+  width: 100%;
   background-color: white;
   margin: 9px 0;
 }
@@ -112,8 +142,17 @@ body .box p {
 body .products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
   gap: 15px;
+}
+@media screen and (max-width: 1365px) {
+  body .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 920px) {
+  body .products {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
 }
 body .products .box {
   display: flex;
@@ -142,117 +181,132 @@ body .products .box a span .span {
   color: gray;
 }
 body .products .box img {
-  height: 300px;
+  height: 293px;
 }
 body .regist {
   margin-top: 40px;
-  min-height: 85vh;
+  max-width: 1350px;
+  width: 100%;
   background-color: #fff;
   padding: 50px;
-  font-size: 1.3rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 200px;
+}
+@media screen and (max-width: 700px) {
+  body .regist {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 0;
+  }
 }
 body .regist .info {
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-flow: column;
-  margin-left: 50px;
+  gap: 50px;
 }
 body .regist .info .child1 a {
   text-decoration: none;
   color: black;
 }
+body .regist .info .child1 .p1 {
+  margin-bottom: 60px;
+}
+body .regist .info .child3 {
+  margin-bottom: 65px;
+}
 body .regist .info .child3 a {
   text-decoration: none;
   color: black;
 }
-body .data {
+body .forms {
   display: flex;
   flex-flow: column;
+  max-width: 370px;
+  width: 100%;
+}
+body .forms .perent {
+  display: flex;
   gap: 50px;
 }
-body .data .perent {
-  display: flex;
-  justify-content: space-between;
-  gap: 50px;
-}
-body .data .perent .text1 {
+body .forms .perent .text1 {
   display: flex;
   flex-flow: column;
+  gap: 40px;
 }
-body .data .perent .text2 {
+body .forms .perent .text2 {
   display: flex;
   flex-flow: column;
+  gap: 40px;
 }
-body .data .perent input {
+body .forms .perent input {
   border-left: none;
   border-top: none;
   border-right: none;
-  width: 290px;
-  height: 70px;
   outline: none;
 }
-body .data .perent2 {
+body .forms .perent2 {
   display: flex;
-  justify-content: space-between;
   gap: 50px;
-  margin-top: 50px;
+  margin-top: 20px;
 }
-body .data .perent2 .text3 {
+body .forms .perent2 .text3 {
   display: flex;
   flex-flow: column;
+  gap: 40px;
 }
-body .data .perent2 .text4 {
+body .forms .perent2 .text4 {
   display: flex;
   flex-flow: column;
+  gap: 40px;
 }
-body .data .perent2 input {
+body .forms .perent2 input {
   border-left: none;
   border-top: none;
   border-right: none;
-  width: 290px;
-  height: 70px;
   outline: none;
 }
-body .data .text5 {
+body .forms .text5 {
   display: flex;
   flex-flow: column;
-  margin-top: 50px;
+  margin-top: 20px;
 }
-body .data .text5 textarea {
+body .forms .text5 textarea {
   border-left: none;
   border-top: none;
   border-right: none;
   height: 70px;
   outline: none;
 }
-body .data .text5 button {
+body .forms .text5 button {
   border: 0;
   height: 2rem;
   font-size: 1.3rem;
   background-color: #fff;
   padding: 30px;
 }
-body .data .text6 {
+body .forms .text6 {
   display: flex;
   flex-flow: column;
+  margin-top: 70px;
 }
-body .data .text6 input {
+body .forms .text6 input {
   margin-top: 20px;
   height: 40px;
+  width: auto;
 }
-body .data .text7 {
+body .forms .text7 {
   display: flex;
   margin-top: 15px;
   gap: 20px;
 }
-body .data .text7 input {
+body .forms .text7 input {
   width: 15px;
   height: 15px;
 }
-body .data .text7 button {
+body .forms .text7 button {
   background-color: black;
   color: white;
   margin-left: 30px;
@@ -260,6 +314,21 @@ body .data .text7 button {
   font-size: 1.2rem;
   border: 0;
 }
-body .data .text7 button:hover {
+body .forms .text7 button:hover {
   background-color: #967e54;
+}
+body .mapi {
+  max-width: 1350px;
+  width: 100%;
+  height: 60vh;
+}
+body footer {
+  display: flex;
+  justify-content: center;
+  font-size: 1.1rem;
+  padding: 35px;
+  margin-top: 20px;
+}
+body footer a {
+  color: black;
 }/*# sourceMappingURL=main.css.map */
