@@ -19,7 +19,9 @@ body .leader {
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 100;
+  font-family: "Fredericka the Great", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 body .leader .firstheader {
   display: flex;
@@ -85,143 +87,108 @@ body .leader .header ul li a {
   font-size: 20px;
   color: black;
 }
-body .img {
+body .bxnny {
   display: flex;
+  align-items: start;
   justify-content: center;
-  align-items: center;
+  max-width: 1350px;
+  width: 100%;
+  margin-top: 145px;
+  gap: 50px;
+}
+body .bxnny .moska {
+  display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  max-width: 1350px;
-  width: 100%;
-  background-image: url(../images/d01231e46af34161be7ad101d281a441.avif);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  gap: 10px;
+  font-size: 1.3rem;
 }
-body .img h1 {
-  font-size: 6rem;
-  color: #fff;
-  font-family: Arial, Helvetica;
+body .bxnny .moska .mose {
+  padding: 10px 20px;
+  font-size: 1.1rem;
 }
-body .img p {
-  margin-top: 10px;
-  color: white;
-  font-size: 2rem;
+body .bxnny .moska .mose:hover {
+  background-color: rgba(128, 128, 128, 0.173);
+  border: 1px solid rgb(134, 108, 42);
 }
-body .img a {
-  background-color: black;
-  padding: 15px 50px;
-  text-decoration: none;
-  transition: 0.4s;
-  margin-top: 70px;
-}
-body .img a:hover {
-  background-color: rgb(170, 137, 76);
-}
-body .img a span {
-  color: #fff;
-}
-body .box {
-  display: flex;
+body .bxnny .moska .quantity {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  flex-flow: column;
-  height: 40vh;
-  max-width: 1350px;
-  width: 100%;
-  background-color: white;
-  margin: 9px 0;
+  border: 1px solid #000;
+  width: -moz-fit-content;
+  width: fit-content;
 }
-body .box h2 {
-  font-size: 2rem;
+body .bxnny .moska .quantity button {
+  width: 30px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
 }
-body .box p {
-  margin: 20px 0;
-  font-family: Arial, Helvetica;
+body .bxnny .moska .quantity button:hover {
+  background-color: #f2f2f2;
+}
+body .bxnny .moska .quantity input {
+  width: 50px;
+  height: 40px;
   text-align: center;
+  border: none;
+  font-size: 16px;
+  background: transparent;
 }
-body .products {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+body .bxnny .moska .quantity input:focus {
+  outline: none;
 }
-@media screen and (max-width: 1365px) {
-  body .products {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (max-width: 920px) {
-  body .products {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
-}
-body .products .box3 {
-  position: relative;
-}
-body .products .box3 .seler {
-  top: 3px;
-  left: 15px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.341);
-  background-color: black;
-  color: white;
-  padding: 2px 10px;
-  position: absolute;
-  font-size: 0.9rem;
-}
-body .products .box6 {
-  position: relative;
-}
-body .products .box6 .new {
-  top: 3px;
-  left: 15px;
-  box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.341);
-  background-color: black;
-  color: white;
-  padding: 1px 8px;
-  position: absolute;
-  font-size: 0.9rem;
-}
-body .products .box7 {
-  position: relative;
-}
-body .products .box7 .sale {
-  top: 3px;
-  left: 15px;
-  box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.341);
-  background-color: black;
-  color: white;
-  padding: 1px 8px;
-  position: absolute;
-  font-size: 0.9rem;
-}
-body .products .box {
+body .bxnny .moska form {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f2f1f0;
+  flex-direction: column;
+  gap: 10px;
 }
-body .products .box a {
+body .bxnny .moska form .payinfo {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-flow: column;
-  text-decoration: none;
-  gap: 8px;
+  flex-direction: column;
+  gap: 10px;
 }
-body .products .box a span {
-  font-size: 1.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-flow: column;
-  color: black;
-  gap: 3px;
+body .bxnny .moska form .payinfo input {
+  max-width: 525px;
+  width: 100%;
+  height: 35px;
 }
-body .products .box a span .span {
-  color: gray;
+body .bxnny .moska form .payinfo textarea {
+  max-width: 525px;
+  width: 100%;
+  height: 100px;
 }
-body .products .box img {
-  height: 293px;
+body .bxnny .moska form .same {
+  max-width: 260px;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: white;
+  border: 1px solid gray;
+  font-size: 1.1rem;
+}
+body .bxnny .moska form .same:hover {
+  background-color: rgba(158, 135, 101, 0.1019607843);
+  border: 1px solid rgb(154, 121, 2);
+}
+body .bxnny .moska form button {
+  max-width: 525px;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(146, 146, 146, 0.236);
+  border: 1px solid rgb(123, 107, 52);
+  font-size: 1.1rem;
+}
+body .bxnny .moska form button:hover {
+  background-color: rgba(158, 135, 101, 0.1019607843);
+  border: 1px solid rgb(154, 121, 2);
+}
+body .bxnny .moska form .buy {
+  max-width: 525px;
+  width: 100%;
+  height: 50px;
+  background-color: #000;
+  color: white;
 }
 body .regist {
   margin-top: 40px;
@@ -372,4 +339,4 @@ body footer {
 }
 body footer a {
   color: black;
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=giftcard.css.map */

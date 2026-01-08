@@ -17,13 +17,12 @@ body .leader {
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 10;
 }
 body .leader .firstheader {
   display: flex;
   justify-content: space-between;
   background-color: #fafafa;
-  padding: 13px;
+  padding: 15px;
 }
 body .leader .firstheader .input {
   display: flex;
@@ -65,7 +64,7 @@ body .leader .firstheader .secondheader .svgs .uefa {
 body .leader .header {
   display: flex;
   justify-content: space-between;
-  padding: 15px;
+  padding: 17px;
   background-color: #f2f1f0;
 }
 body .leader .header p {
@@ -84,48 +83,141 @@ body .leader .header ul li a {
   color: black;
 }
 body .shop {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  padding-top: 150px;
+  gap: 80px;
+}
+@media screen and (max-width: 840px) {
+  body .shop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+body .shop .filter {
   display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+body .shop .filter .range {
+  width: 220px;
+}
+body .shop .filter .range__title {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+body .shop .filter .price {
+  border-top: 1px solid #dcdcdc;
+  padding-top: 12px;
+}
+body .shop .filter .price__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+body .shop .filter .price__slider input[type=range] {
+  width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: 2px;
+  background: #000;
+  margin: 10px 0;
+}
+body .shop .filter .price__slider input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 12px;
+  height: 12px;
+  background: #000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+body .shop .filter .price__values {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
+body .shop .filter h2 {
+  font-size: 1.4rem;
+  max-width: 150px;
+  width: 100%;
+}
+body .shop .filter ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+body .shop .filter ul .bold {
+  font-weight: bold;
+}
+body .shop .filter ul li a {
+  font-size: 1.1rem;
+  color: black;
+}
+body .shop main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+body .shop main .step {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: flex-start;
-  padding-top: 140px;
-  max-width: 1350px;
-  width: 100%;
 }
-body .shop .aside {
+body .shop main .top-bar {
   display: flex;
-  align-items: start;
-  justify-content: start;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 60px;
 }
-body .shop .tato {
-  display: grid;
-  grid-template-columns: 2, 1fr;
-  gap: 40px;
-  align-items: start;
-}
-body .shop .tato main {
-  width: 100%;
-}
-body .shop .tato main ul {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-}
-body .shop .tato main ul li {
+body .shop main .top-bar .options {
   display: flex;
+  align-items: center;
+  font-size: 1.2rem;
 }
-body .shop .tato main ul li a {
+body .shop main .top-bar .options select {
+  border: none;
+  background: transparent;
+  font-size: 1.1rem;
+}
+body .shop main ul {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(2, minmax(500px, 1fr));
+  gap: 20px;
+}
+@media screen and (max-width: 1350px) {
+  body .shop main ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
+body .shop main ul .mone {
+  font-size: larger;
+  color: gray;
+}
+body .shop main ul .money {
+  font-size: larger;
+}
+body .shop main ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  gap: 10px;
 }
-body .shop .tato main ul li a span {
+body .shop main ul li a span {
   color: black;
 }
-body .shop .tato main ul .box {
+body .shop main ul .box {
   display: flex;
 }
-body .shop .tato main img {
-  max-width: 400px;
+body .shop main img {
+  max-width: 500px;
   width: 100%;
 }/*# sourceMappingURL=product.css.map */

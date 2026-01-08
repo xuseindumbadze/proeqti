@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./giftcard.css">
 </head>
 
 <body>
@@ -49,53 +49,78 @@
                 <p>ceramic-studio</p>
                 <nav>
                     <ul>
-                        <li><a href="./main.html">home</a></li>
-                        <li><a href="./products/product.html">shop</a></li>
-                        <li><a href="./about/about.html">about</a></li>
-                        <li><a href="./gift/giftcard.html">gift card</a></li>
+                        <li><a href="../main.html">home</a></li>
+                        <li><a href="../products/product.html">shop</a></li>
+                        <li><a href="../about/about.html">about</a></li>
+                        <li><a href="../gift/giftcard.html">gift card</a></li>
                         <li><a href="#">contact</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
     </div>
-    <div class="img">
-        <h1>
-            ceramic studio
-        </h1>
-        <p>
-            artisan pottery
-        </p>
-        <a href="#"><span>shop now</span></a>
-    </div>
-    <div class="box">
-        <h2>OUR COLLECTION</h2>
-        <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit <br> Text” or
-            double click me to add your own content and make changes to the font. I’m a <br> great place for you to tell
-            a story and let your users know a little more about you.</p>
-    </div>
 
-    <div class="products">
-        <div class="box box1"><a href="#"><img src="../images/1.avif" alt="photo"><span>i'm a product <br> <span
-                        class="span">$25.00</span></span></a></div>
-        <div class="box box2"><a href="#"><img src="../images/2.avif" alt="photo"><span>i'm a product <br> <span
-                        class="span">$38.00</span></span></a></div>
-        <div class="box box3"><div class="seler">Best Seller</div><a href="#"><img src="../images/3.avif" alt="photo"><span>i'm a product <br> <span
-                        class="span">$18.00</span></span></a></div>
-        <div class="box box4"><a href="#"><img src="../images/4.avif" alt="photo"><span>i'm a product <br> <span
-                        class="span">$130.00</span></span></a></div>
-        <div class="box box5"><a href="#"><img src="../images/5.avif" alt="photo"><span>i'm a product <br> <span
-                        class="span">$85.00</span></span></a></div>
-        <div class="box box6"> <div class="new">New</div><a href="#"><img src="../images/6.avif" alt="photo"><span>i'm a product <br> <span
-                        class="span">$50.00</span></span></a></div>
-        <div class="box box7"> <div class="sale">Sale</div><a href="#"><img src="../images/7.avif" alt="photo"><span>i'm a product <br> <span
-                        class="span">$95.00</span></span></a></div>
-        <div class="box box8"><a href="#"><img src="../images/8.avif" alt="photo"><span>i'm a product <br> <span
-                        class="span">$45.00</span></span></a></div>
-        <div class="box box9"><a href="#"><img src="../images/9.avif" alt="photo"  ><span>i'm a product <br> <span
-                        class="span">$40.00</span></span></a></div>
-    </div>
+    <div class="bxnny">
+        <img src="../images/e90a2a_c3de803545f340df9dd4aa88a72e0718~mv2.jpg" alt="photo">
+        <div class="moska">
+            <h1>eGift Card</h1>
+            <p>$25</p>
+            <p>You can't go wrong with a gift card. Choose an amount and <br> write a personalized message to make this
+                gift your own.</p>
+            <p>amount</p>
+            <div class="kami">
+                <button class="mose">$25</button>
+                <button class="mose">$50</button>
+                <button class="mose">$100</button>
+                <button class="mose">$150</button>
+                <button class="mose">$200</button>
+            </div>
+            <p>quantiti</p>
+            <div class="quantity">
+                <button class="minus">−</button>
+                <input type="number" value="1" min="1" max="10" readonly>
+                <button class="plus">+</button>
+            </div>
 
+            <script>
+                const minus = document.querySelector(".minus");
+                const plus = document.querySelector(".plus");
+                const input = document.querySelector(".quantity input");
+
+                plus.onclick = () => {
+                    if (Number(input.value) < 10) {
+                        input.value++;
+                    }
+                };
+
+                minus.onclick = () => {
+                    if (Number(input.value) > 1) {
+                        input.value--;
+                    }
+                };
+            </script>
+
+            <p>Who is the gift card for?</p>
+            <form>
+                <div>
+                    <button class="same">for someone else</button>
+                    <button class="same">for myself</button>
+                </div>
+                <div class="payinfo">
+                    <p>Recipient email *</p>
+                    <input type="email">
+                    <p>Recipient name</p>
+                    <input type="text">
+                    <p>Delivery date</p>
+                    <input type="date">
+                    <label for="message">message</label>
+                    <textarea name="idk" id="message"></textarea>
+                </div>
+                <button>Add to card</button>
+                <button class="buy">Buy Now</button>
+            </form>
+        </div>
+    </div>
     <div class="regist">
         <div class="info">
             <div class="child1">
@@ -111,8 +136,8 @@
                 <p>SUNDAY: 8am - 11pm</p>
             </div>
             <div class="child3">
-                <p><a href="./faq/faq.html">FAQ / Shipping & Returns /</a></p>
-                <p><a href="./polici/polici.html">Store Policy /</a></p>
+                <p><a href="../faq/faq.html">FAQ / Shipping & Returns /</a></p>
+                <p><a href="../polici/polici.html">Store Policy /</a></p>
                 <p><a href="#">Payment Methods</a></p>
             </div>
         </div>

@@ -48,10 +48,10 @@
                 <p>ceramic-studio</p>
                 <nav>
                     <ul>
-                        <li><a href="main.html">home</a></li>
-                        <li><a href="./products/product.html">shop</a></li>
-                        <li><a href="#">about</a></li>
-                        <li><a href="#">gift card</a></li>
+                        <li><a href="../main.html">home</a></li>
+                        <li><a href="../products/product.html">shop</a></li>
+                        <li><a href="../about/about.html">about</a></li>
+                        <li><a href="../gift/giftcard.html">gift card</a></li>
                         <li><a href="#">contact</a></li>
                     </ul>
                 </nav>
@@ -61,64 +61,98 @@
 
 
     <div class="shop">
-        <div class="aside">
-            <aside class="filter">
-                <h2>Browse by</h2>
+        <aside class="filter">
+            <h2>Browse by <span>
+                    <hr>
+                </span></h2>
+            <ul>
+                <li class="bold"><a href="#">All Products</a></li>
+                <li><a href="#">Clay Mugs</a></li>
+                <li><a href="#">Desert Dishes</a></li>
+                <li><a href="#">One Flower Bottle</a></li>
+            </ul>
 
-                <hr>
+            <div class="range">
+                <h3 class="range__title">Filter by</h3>
 
-                <ul>
-                    <li><a href="#">All Products</a></li>
-                    <li><a href="#">Clay Mugs</a></li>
-                    <li><a href="#">Desert Dishes</a></li>
-                    <li><a href="#">One Flower Bottle</a></li>
-                </ul>
-
-            </aside>
-        </div>
-        <div class="tato">
-            <main>
-                <ul>
-                    <div class="box box-1">
-                        <li><a href="#"><img src="../images/1.avif" alt="product"><span>I'm a
-                                    product</span><span>25$</span></a></li>
-                    </div>
-                    <div class="box box-2">
-                        <li><a href="#"><img src="../images/2.avif" alt="product"><span>I'm a
-                                    product</span><span>38$</span></a></li>
-                    </div>
-                    <div class="box box-3">
-                        <li><a href="#"><img src="../images/3.avif" alt="product"><span>I'm a
-                                    product</span><span>18$</span></a></li>
+                <div class="price">
+                    <div class="price__header">
+                        <span>Price</span>
+                        <span class="price__icon">–</span>
                     </div>
 
-                    <div class="box box-4">
-                        <li><a href="#"><img src="../images/4.avif" alt="product"><span>I'm a
-                                    product</span><span>130$</span></a></li>
+                    <div class="price__slider">
+                        <input type="range" />
                     </div>
-                    <div class="box box-5">
-                        <li><a href="#"><img src="../images/5.avif" alt="product"><span>I'm a
-                                    product</span><span>85$</span></a></li>
+
+                    <div class="price__values">
+                        <span>$18</span>
+                        <span>$130</span>
                     </div>
-                    <div class="box box-6">
-                        <li><a href="#"><img src="../images/6.avif" alt="product"><span>I'm a
-                                    product</span><span>50$</span></a></li>
-                    </div>
-                    <div class="box box-7">
-                        <li><a href="#"><img src="../images/7.avif" alt="product"><span>I'm a
-                                    product</span><span>95$</span></a></li>
-                    </div>
-                    <div class="box box-8">
-                        <li><a href="#"><img src="../images/8.avif" alt="product"><span>I'm a
-                                    product</span><span>40$</span></a></li>
-                    </div>
-                    <div class="box box-9">
-                        <li><a href="#"><img src="../images/9.avif" alt="product"><span>I'm a
-                                    product</span><span>45$</span></a></li>
-                    </div>
-                </ul>
-            </main>
-        </div>
+                </div>
+            </div>
+
+
+
+
+        </aside>
+        <main>
+            <div class="top-bar">
+                <h2>All Products</h2>
+
+                <div class="options">
+                    <label for="sort">Sort by:</label>
+                    <select id="sort">
+                        <option value="recomend">recomended</option>
+                        <option value="Newest">Newest</option>
+                        <option value="price">Price(low to hight)</option>
+                        <option value="hprice">Price(hight tolow )</option>
+                        <option value="Name">Name A-Z</option>
+                        <option value="name">Name Z-A</option>
+                    </select>
+                </div>
+            </div>
+            <ul>
+
+                <li class="box box-1"><a href="#"><img src="../images/1.avif" alt="product"><span class="money">I'm a
+                            product</span><span class="mone">25$</span></a></li>
+
+
+                <li class="box box-2"><a href="#"><img src="../images/2.avif" alt="product"><span class="money">I'm a
+                            product</span><span class="mone">38$</span></a></li>
+
+
+                <li class="box box-3"><a href="#"><img src="../images/3.avif" alt="product"><span class="money">I'm a
+                            product</span><span class="mone">18$</span></a></li>
+
+
+
+                <li class="box box-4"><a href="#"><img src="../images/4.avif" alt="product"><span class="money">I'm a
+                            product</span><span class="mone">130$</span></a></li>
+
+
+                <li class="box box-5"><a href="#"><img src="../images/5.avif" alt="product"><span class="money">I'm a
+                            product</span><span class="mone">85$</span></a></li>
+
+
+                <li class="box box-6"><a href="#"><img src="../images/6.avif" alt="product"><span class="money">I'm a
+                            product</span><span class="mone">50$</span></a></li>
+
+
+                <li class="box box-7"><a href="#"><img src="../images/7.avif" alt="product"><span class="money">I'm a
+                            product</span><span class="mone">95$</span></a></li>
+
+
+                <li class="box box-8"><a href="#"><img src="../images/8.avif" alt="product"><span class="money">I'm a
+                            product</span><span class="mone">40$</span></a></li>
+
+
+                <li class="box box-9"><a href="#"><img src="../images/9.avif" alt="product"><span class="money">I'm a
+                            product</span><span class="mone">45$</span></a></li>
+
+            </ul>
+        </main>
+
     </div>
 </body>
 
