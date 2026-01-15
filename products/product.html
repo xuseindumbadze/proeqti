@@ -49,10 +49,10 @@
                 <nav>
                     <ul>
                         <li><a href="../main.html">home</a></li>
-                        <li><a href="../products/product.html">shop</a></li>
+                        <li><a class="don" href="../products/product.html">shop</a></li>
                         <li><a href="../about/about.html">about</a></li>
                         <li><a href="../gift/giftcard.html">gift card</a></li>
-                        <li><a href="#">contact</a></li>
+                        <li><a href="../contact/contact.html">contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -97,19 +97,21 @@
 
         </aside>
         <main>
-            <div class="top-bar">
+            <div class="products-header">
                 <h2>All Products</h2>
 
-                <div class="options">
-                    <label for="sort">Sort by:</label>
-                    <select id="sort">
-                        <option value="recomend">recomended</option>
-                        <option value="Newest">Newest</option>
-                        <option value="price">Price(low to hight)</option>
-                        <option value="hprice">Price(hight tolow )</option>
-                        <option value="Name">Name A-Z</option>
-                        <option value="name">Name Z-A</option>
-                    </select>
+                <div class="top-bar">
+                    <div class="options">
+                        <label for="sort">Sort by:</label>
+                        <select id="sort">
+                            <option value="recomend">Recommended</option>
+                            <option value="Newest">Newest</option>
+                            <option value="price">Price (low to high)</option>
+                            <option value="hprice">Price (high to low)</option>
+                            <option value="Name">Name A-Z</option>
+                            <option value="name">Name Z-A</option>
+                        </select>
+                    </div>
                 </div>
             </div>
             <ul>
@@ -154,6 +156,84 @@
         </main>
 
     </div>
+
+    <div class="social">
+        <ul>
+            <li><a href="https://www.facebook.com/wix"><img src="../images/facebook.png" alt="facebook"></a></li>
+            <li><a href="https://www.instagram.com/wix/"><img src="../images/instagram.png" alt="instagram"></a></li>
+            <li><a href="https://x.com/wix"><img src="../images/teitter.png" alt="twitter"></a></li>
+            <li><a href="https://www.pinterest.com/wixcom/"><img src="../images/pinterest.png" alt="pinterest"></a></li>
+        </ul>
+    </div>
+
+    <div class="regist">
+        <div class="info">
+            <div class="child1">
+                <p class="p1">ceramic-studio</p>
+                <p>A: 500 Terry Francine St.</p>
+                <p>San Francisco, CA 94158</p>
+                <p>T: 123-456-7890</p>
+                <a href="#"><span>E:</span>info@my-domain.com</a>
+            </div>
+            <div class="child2">
+                <p>MON - FRI: 7am - 10pm</p>
+                <p>SATURDAY: 8am - 10pm</p>
+                <p>SUNDAY: 8am - 11pm</p>
+            </div>
+            <div class="child3">
+                <p><a href="./faq/faq.html">FAQ / Shipping & Returns /</a></p>
+                <p><a href="./polici/polici.html">Store Policy /</a></p>
+                <p><a href="#">Payment Methods</a></p>
+            </div>
+        </div>
+
+        <form class="forms">
+            <div class="perent">
+                <div class="text1">
+                    <label for="name">First Name*</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="text2">
+                    <label for="lastname">Last Name*</label>
+                    <input type="text" id="lastname" required>
+                </div>
+            </div>
+            <div class="perent2">
+                <div class="text3">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email">
+                </div>
+                <div class="text4">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject">
+                </div>
+            </div>
+            <div class="text5">
+                <label for="message">Message</label>
+                <textarea name="comment" id="message"></textarea>
+                <button>submit</button>
+            </div>
+            <div class="text6">
+                <label for="under">Email*</label>
+                <input type="email" id="under" required>
+            </div>
+            <div class="text7">
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox">Yes, subscribe me to your newsletter.*</label>
+                <button>submit</button>
+            </div>
+        </form>
+    </div>
+    <iframe class="mapi"
+        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d788.4144326127947!2d-122.41986760768995!3d37.774622922065475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1smap!5e0!3m2!1ska!2sge!4v1765885349119!5m2!1ska!2sge"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <footer>
+        <p>&copy;2035 by Ceramic-Studio. Powered and secured by <a href="https://www.wix.com/">Wix</a></p>
+    </footer>
+</body>
+
+</html>
 </body>
 
 </html>

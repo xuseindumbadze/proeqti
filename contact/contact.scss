@@ -1,0 +1,288 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: Arial, sans-serif;
+}
+
+$bgcolor: #fafafa;
+$hbgcolor: #f2f1f0;
+$font: Arial, Helvetica;
+$pad: 30px;
+$fonts: "Fredericka the Great", serif;
+$fontweight: 400;
+$font-style: normal;
+$maxwidth: 1350px;
+
+
+
+
+body {
+    background-color: $hbgcolor;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+
+
+    .leader {
+        max-width: $maxwidth;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+
+
+
+        .firstheader {
+            display: flex;
+            justify-content: space-between;
+            background-color: $bgcolor;
+            padding: 13px;
+
+
+            .input {
+                display: flex;
+                align-items: center;
+                font-size: 1.5rem;
+
+                .search {
+                    display: flex;
+                    justify-self: center;
+                    align-items: center;
+                }
+
+                input {
+                    border: 0;
+                    background-color: transparent;
+                }
+            }
+
+
+            button {
+                font-size: 1.5rem;
+                border: 0;
+                height: 2rem;
+                background-color: transparent;
+            }
+
+            .secondheader {
+                display: flex;
+                gap: 30px;
+                max-width: 180px;
+                width: 100%;
+
+                button {
+                    display: flex;
+                    gap: 10px;
+                }
+
+                .svgs {
+                    max-width: 40px;
+                    max-height: 40px;
+
+                    .uefa {
+                        font-size: 70px;
+                    }
+                }
+            }
+
+
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            background-color: #f2f1f0;
+
+
+
+            p {
+                font-size: 2rem;
+                font-family: $font;
+            }
+
+            ul {
+                display: flex;
+
+                li {
+                    margin: 15px;
+
+                    .don {
+                        color: #967e54;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        font-size: 20px;
+                        color: black;
+
+                        &:hover {
+                            color: #967e54;
+                            transition: 0.3s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .didube {
+        margin-top: 145px;
+        max-width: $maxwidth;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        padding: 50px 0;
+    }
+
+    .saburtalo {
+        max-width: $maxwidth;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        .mikro {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 120px;
+            max-width: $maxwidth;
+            width: 100%;
+
+            .options {
+                display: flex;
+                align-items: center;
+                font-size: 1.2rem;
+
+                label {
+                    text-align: right;
+                }
+
+
+                select {
+                    border: none;
+                    background: transparent;
+                    font-size: 1.1rem;
+                }
+            }
+        }
+
+        .digomi {
+            display: flex;
+            gap: 30px;
+
+            .calendar {
+                width: 320px;
+                font-family: sans-serif;
+                padding: 10px;
+
+                .header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 12px;
+
+                    .arrow {
+                        font-size: 20px;
+                        cursor: pointer;
+                    }
+
+                    .title {
+                        font-weight: 600;
+                    }
+                }
+
+                .weekdays {
+                    display: grid;
+                    grid-template-columns: repeat(7, 1fr);
+                    text-align: center;
+                    margin-bottom: 10px;
+                    font-size: 14px;
+                }
+
+                .days {
+                    display: grid;
+                    grid-template-columns: repeat(7, 1fr);
+                    gap: 8px;
+
+                    .day {
+                        height: 44px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+
+                        .dot {
+                            width: 4px;
+                            height: 4px;
+                            background: #0b3c49;
+                            border-radius: 50%;
+                            margin-top: 4px;
+                        }
+
+                        &.active {
+                            background: #0b3c49;
+                            color: #fff;
+                            border-radius: 6px;
+
+                            .dot {
+                                background: #fff;
+                            }
+                        }
+
+                        &.muted {
+                            color: #cfcfcf;
+                        }
+                    }
+                }
+            }
+
+            .aviabiletebi {
+                width: 360px;
+                font-family: sans-serif;
+
+                .somxeti {
+                    font-size: 16px;
+                    margin-bottom: 16px;
+                }
+
+                .azerbaijani {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 12px;
+
+                    .time-btn {
+                        height: 48px;
+                        border: 1px solid #666;
+                        background: #fff;
+                        font-size: 16px;
+                        cursor: pointer;
+
+                        &:hover {
+                            background: #f2f2f2;
+                        }
+
+                        &.active {
+                            background: #2f5560;
+                            color: #fff;
+                            border-color: #2f5560;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

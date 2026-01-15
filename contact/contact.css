@@ -1,0 +1,224 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f2f1f0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+body .leader {
+  max-width: 1350px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+body .leader .firstheader {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fafafa;
+  padding: 13px;
+}
+body .leader .firstheader .input {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+}
+body .leader .firstheader .input .search {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+body .leader .firstheader .input input {
+  border: 0;
+  background-color: transparent;
+}
+body .leader .firstheader button {
+  font-size: 1.5rem;
+  border: 0;
+  height: 2rem;
+  background-color: transparent;
+}
+body .leader .firstheader .secondheader {
+  display: flex;
+  gap: 30px;
+  max-width: 180px;
+  width: 100%;
+}
+body .leader .firstheader .secondheader button {
+  display: flex;
+  gap: 10px;
+}
+body .leader .firstheader .secondheader .svgs {
+  max-width: 40px;
+  max-height: 40px;
+}
+body .leader .firstheader .secondheader .svgs .uefa {
+  font-size: 70px;
+}
+body .leader .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #f2f1f0;
+}
+body .leader .header p {
+  font-size: 2rem;
+  font-family: Arial, Helvetica;
+}
+body .leader .header ul {
+  display: flex;
+}
+body .leader .header ul li {
+  margin: 15px;
+}
+body .leader .header ul li .don {
+  color: #967e54;
+}
+body .leader .header ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+}
+body .leader .header ul li a:hover {
+  color: #967e54;
+  transition: 0.3s;
+}
+body .didube {
+  margin-top: 145px;
+  max-width: 1350px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 50px 0;
+}
+body .saburtalo {
+  max-width: 1350px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+body .saburtalo .mikro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+  max-width: 1350px;
+  width: 100%;
+}
+body .saburtalo .mikro .options {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
+body .saburtalo .mikro .options label {
+  text-align: right;
+}
+body .saburtalo .mikro .options select {
+  border: none;
+  background: transparent;
+  font-size: 1.1rem;
+}
+body .saburtalo .digomi {
+  display: flex;
+  gap: 30px;
+}
+body .saburtalo .digomi .calendar {
+  width: 320px;
+  font-family: sans-serif;
+  padding: 10px;
+}
+body .saburtalo .digomi .calendar .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+body .saburtalo .digomi .calendar .header .arrow {
+  font-size: 20px;
+  cursor: pointer;
+}
+body .saburtalo .digomi .calendar .header .title {
+  font-weight: 600;
+}
+body .saburtalo .digomi .calendar .weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+body .saburtalo .digomi .calendar .days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+body .saburtalo .digomi .calendar .days .day {
+  height: 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+body .saburtalo .digomi .calendar .days .day .dot {
+  width: 4px;
+  height: 4px;
+  background: #0b3c49;
+  border-radius: 50%;
+  margin-top: 4px;
+}
+body .saburtalo .digomi .calendar .days .day.active {
+  background: #0b3c49;
+  color: #fff;
+  border-radius: 6px;
+}
+body .saburtalo .digomi .calendar .days .day.active .dot {
+  background: #fff;
+}
+body .saburtalo .digomi .calendar .days .day.muted {
+  color: #cfcfcf;
+}
+body .saburtalo .digomi .aviabiletebi {
+  width: 360px;
+  font-family: sans-serif;
+}
+body .saburtalo .digomi .aviabiletebi .somxeti {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+body .saburtalo .digomi .aviabiletebi .azerbaijani {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+body .saburtalo .digomi .aviabiletebi .azerbaijani .time-btn {
+  height: 48px;
+  border: 1px solid #666;
+  background: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+body .saburtalo .digomi .aviabiletebi .azerbaijani .time-btn:hover {
+  background: #f2f2f2;
+}
+body .saburtalo .digomi .aviabiletebi .azerbaijani .time-btn.active {
+  background: #2f5560;
+  color: #fff;
+  border-color: #2f5560;
+}/*# sourceMappingURL=contact.css.map */

@@ -63,6 +63,7 @@ body .leader .firstheader .secondheader .svgs .uefa {
 }
 body .leader .header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 17px;
   background-color: #f2f1f0;
@@ -276,4 +277,25 @@ body footer {
 }
 body footer a {
   color: black;
+}
+@media (max-width: 700px) {
+  body .header nav {
+    display: none;
+  }
+  body footer {
+    font-size: 1rem;
+  }
+  body .regist .info {
+    display: flex;
+    flex-flow: column;
+    gap: 50px;
+  }
+  body .regist .forms .perent {
+    display: flex;
+    flex-direction: column;
+  }
+  body .regist .forms .perent2 {
+    display: flex;
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=polici.css.map */

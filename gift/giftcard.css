@@ -68,6 +68,7 @@ body .leader .firstheader .secondheader .svgs .uefa {
 }
 body .leader .header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 15px;
   background-color: #f2f1f0;
@@ -82,10 +83,33 @@ body .leader .header ul {
 body .leader .header ul li {
   margin: 15px;
 }
+body .leader .header ul li .don {
+  color: #967e54;
+}
 body .leader .header ul li a {
   text-decoration: none;
   font-size: 20px;
   color: black;
+}
+body .leader .header ul li a:hover {
+  color: #967e54;
+  transition: 0.3s;
+}
+body .social {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 911;
+  right: 1.5%;
+  top: 50%;
+}
+body .social ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+body .social ul img {
+  width: 30px;
 }
 body .bxnny {
   display: flex;
@@ -339,4 +363,33 @@ body footer {
 }
 body footer a {
   color: black;
+}
+@media (max-width: 700px) {
+  body .header nav {
+    display: none;
+  }
+  body footer {
+    font-size: 1rem;
+  }
+  body .regist .info {
+    display: flex;
+    flex-flow: column;
+    gap: 50px;
+  }
+  body .regist .forms .perent {
+    display: flex;
+    flex-direction: column;
+  }
+  body .regist .forms .perent2 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1190px) {
+  body .bxnny {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=giftcard.css.map */
