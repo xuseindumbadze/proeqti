@@ -6,14 +6,10 @@
   list-style-type: none;
 }
 
-
-
-$fontfamily: "Fredericka the Great", serif;
-$fontwight: 400;
-$fontstyle: normal;
 $bgcolor: #fafafa;
+
 $hbgcolor: #f2f1f0;
-$font: Arial, Helvetica;
+
 $pad: 30px;
 $maxwidth: 1350px;
 
@@ -28,14 +24,13 @@ body {
     width: 100%;
     position: fixed;
     top: 0;
-
-
+    z-index: 100;
 
     .firstheader {
       display: flex;
       justify-content: space-between;
       background-color: $bgcolor;
-      padding: 15px;
+      padding: 13px;
 
       .input {
         display: flex;
@@ -44,7 +39,7 @@ body {
 
         .search {
           display: flex;
-          justify-content: center;
+          justify-self: center;
           align-items: center;
         }
 
@@ -53,7 +48,6 @@ body {
           background-color: transparent;
         }
       }
-
 
       button {
         font-size: 1.5rem;
@@ -67,6 +61,10 @@ body {
         gap: 30px;
         max-width: 180px;
         width: 100%;
+
+        @media screen and (max-width: 500px) {
+          display: none;
+        }
 
         button {
           display: flex;
@@ -82,20 +80,23 @@ body {
           }
         }
       }
-
-
     }
 
     .header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 17px;
+      padding: 15px;
       background-color: #f2f1f0;
+
+      .burger {
+        display: none;
+        font-size: 2rem;
+        cursor: pointer;
+      }
 
       p {
         font-size: 2rem;
-        font-family: $font;
       }
 
       ul {
@@ -123,12 +124,6 @@ body {
     }
   }
 
-
-
-  //..........
-
-
-
   .social {
     display: flex;
     flex-direction: column;
@@ -136,6 +131,10 @@ body {
     z-index: 911;
     right: 1.5%;
     top: 50%;
+
+    @media screen and (max-width: 500px) {
+      display: none;
+    }
 
     ul {
       display: flex;
@@ -148,19 +147,17 @@ body {
     }
   }
 
-
   .shop {
     display: grid;
     grid-template-columns: max-content 1fr;
     padding-top: 180px;
     gap: 80px;
 
-    @media screen and (max-width:840px) {
+    @media screen and (max-width: 840px) {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-
     }
 
     .filter {
@@ -168,17 +165,18 @@ body {
       flex-direction: column;
       gap: 10px;
 
-
       $black: #000;
       $gray: #dcdcdc;
 
       $black: #000;
       $gray: #dcdcdc;
 
+      @media screen and (max-width: 400px) {
+        display: none;
+      }
 
       .range {
         width: 220px;
-
 
         &__title {
           font-size: 24px;
@@ -224,8 +222,6 @@ body {
         }
       }
 
-
-
       h2 {
         font-size: 1.4rem;
         max-width: 150px;
@@ -248,7 +244,6 @@ body {
           }
         }
       }
-
     }
 
     main {
@@ -260,7 +255,6 @@ body {
         text-align: center;
       }
 
-
       .top-bar {
         display: flex;
         justify-content: end;
@@ -271,21 +265,26 @@ body {
           text-align: right;
         }
 
-
         .options {
           display: flex;
           align-items: center;
           font-size: 1.2rem;
 
+          @media screen and (max-width: 350px) {
+            font-size: 1rem;
+          }
 
           select {
             border: none;
             background: transparent;
             font-size: 1.1rem;
+
+            @media screen and (max-width: 350px) {
+              font-size: 1rem;
+            }
           }
         }
       }
-
 
       ul {
         display: grid;
@@ -293,14 +292,13 @@ body {
         grid-template-columns: repeat(4, minmax(150px, 1fr));
         gap: 20px;
 
-        @media screen and (max-width:1350px) {
+        @media screen and (max-width: 1350px) {
           display: grid;
           margin: 0 auto;
-          grid-template-columns: repeat(2, minmax(150px, 1fr));
+          grid-template-columns: repeat(2, minmax(135px, 1fr));
           gap: 20px;
           padding: 15px;
         }
-
 
         .mone {
           font-size: larger;
@@ -312,8 +310,6 @@ body {
         }
 
         li {
-
-
           a {
             display: flex;
             align-items: center;
@@ -324,7 +320,6 @@ body {
             span {
               color: black;
             }
-
           }
         }
 
@@ -338,8 +333,6 @@ body {
         width: 100%;
       }
     }
-
-
   }
 
   .regist {
@@ -353,7 +346,7 @@ body {
     gap: 200px;
     font-size: 1.2rem;
 
-    @media screen and (max-width:700px) {
+    @media screen and (max-width: 700px) {
       display: flex;
       flex-flow: column;
       align-items: center;
@@ -385,7 +378,6 @@ body {
           color: black;
         }
       }
-
     }
   }
 
@@ -416,10 +408,7 @@ body {
         border-top: none;
         border-right: none;
         outline: none;
-
-
       }
-
     }
 
     .perent2 {
@@ -444,8 +433,6 @@ body {
         border-top: none;
         border-right: none;
         outline: none;
-
-
       }
     }
 
@@ -488,6 +475,19 @@ body {
       margin-top: 15px;
       gap: 20px;
 
+      @media screen and (max-width: 500px) {
+        display: flex;
+        flex-direction: column;
+      }
+      .sivi {
+        @media screen and (max-width: 500px) {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+        }
+      }
+
       input {
         width: 15px;
         height: 15px;
@@ -506,7 +506,6 @@ body {
         }
       }
     }
-
   }
 
   .mapi {
@@ -522,12 +521,10 @@ body {
     padding: 35px;
     margin-top: 20px;
 
-
     a {
       color: black;
     }
   }
-
 
   @media (max-width: 700px) {
     .header {
@@ -541,7 +538,6 @@ body {
     }
 
     .regist {
-
       .info {
         display: flex;
 
@@ -562,6 +558,52 @@ body {
       }
     }
   }
+@media screen and (max-width: 700px) {
+      .burger {
+        display: block;
+      }
+    }
 
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    background-color: white;
+    transition: 0.4s ease;
+    z-index: 9999;
+    padding: 40px 20px;
 
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+
+      a {
+        font-size: 1.5rem;
+        color: black;
+      }
+    }
+  }
+
+  .mobile-menu.active {
+    right: 0;
+  }
+
+  .close {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-bottom: 30px;
+  }
 }
+
+@media screen and (max-width: 700px) {
+  .burger {
+    display: block !important;
+  }
+}
+  
+

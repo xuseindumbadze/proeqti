@@ -68,6 +68,11 @@ body .leader .header {
   padding: 17px;
   background-color: #f2f1f0;
 }
+body .leader .header .burger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
 body .leader .header p {
   font-size: 2rem;
   font-family: Arial, Helvetica;
@@ -297,5 +302,46 @@ body footer a {
   body .regist .forms .perent2 {
     display: flex;
     flex-direction: column;
+  }
+}
+@media screen and (max-width: 700px) {
+  body .burger {
+    display: block;
+  }
+}
+body .mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  height: 100vh;
+  background-color: white;
+  transition: 0.4s ease;
+  z-index: 9999;
+  padding: 40px 20px;
+}
+body .mobile-menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+body .mobile-menu ul a {
+  font-size: 1.5rem;
+  color: black;
+}
+body .mobile-menu.active {
+  right: 0;
+}
+body .close {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 700px) {
+  .burger {
+    display: block !important;
   }
 }/*# sourceMappingURL=polici.css.map */

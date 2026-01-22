@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://fonts.google.com/">
 </head>
 
 <body>
@@ -57,8 +58,23 @@
                         <li><a href="./contact/contact.html">contact</a></li>
                     </ul>
                 </nav>
+
+             <div class="burger" id="burger">☰</div>
             </div>
         </header>
+
+        <div class="mobile-menu" id="mobileMenu">
+  <button class="close" id="closeMenu">✕</button>
+
+        <ul>
+             <li><a href="./main.html">Home</a></li>
+             <li><a href="./products/product.html">Shop</a></li>
+             <li><a href="./about/about.html">About</a></li>
+             <li><a href="./gift/giftcard.html">Gift Card</a></li>
+             <li><a href="./contact/contact.html">Contact</a></li>
+        </ul>
+    </div>
+
     </div>
 
     <div class="social">
@@ -82,7 +98,7 @@
 
 
     
-    <div class="box">
+    <div class="box11">
         <h2>OUR COLLECTION</h2>
         <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit <br> Text” or
             double click me to add your own content and make changes to the font. I’m a <br> great place for you to tell
@@ -168,8 +184,11 @@
                 <input type="email" id="under" required>
             </div>
             <div class="text7">
+                <div class="sivi">
                 <input type="checkbox" id="checkbox">
-                <label for="checkbox">Yes, subscribe me to your newsletter.*</label>
+                <label for="checkbox">Yes, subscribe me <br> to your newsletter.*</label>
+                </div>
+                
                 <button>submit</button>
             </div>
         </form>
@@ -181,6 +200,22 @@
     <footer>
         <p>&copy;2035 by Ceramic-Studio. Powered and secured by <a href="https://www.wix.com/">Wix</a></p>
     </footer>
+
+
+    <script>
+  const burger = document.getElementById("burger");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenu = document.getElementById("closeMenu");
+
+  burger.addEventListener("click", () => {
+    mobileMenu.classList.add("active");
+  });
+
+  closeMenu.addEventListener("click", () => {
+    mobileMenu.classList.remove("active");
+  });
+</script>
+
 </body>
 
 </html>

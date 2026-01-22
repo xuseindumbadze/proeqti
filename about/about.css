@@ -51,6 +51,11 @@ body .leader .firstheader .secondheader {
   max-width: 180px;
   width: 100%;
 }
+@media screen and (max-width: 500px) {
+  body .leader .firstheader .secondheader {
+    display: none;
+  }
+}
 body .leader .firstheader .secondheader button {
   display: flex;
   gap: 10px;
@@ -99,6 +104,11 @@ body .social {
   right: 1.5%;
   top: 50%;
 }
+@media screen and (max-width: 500px) {
+  body .social {
+    display: none;
+  }
+}
 body .social ul {
   display: flex;
   flex-direction: column;
@@ -129,9 +139,27 @@ body .story .whouse {
 body .story .whouse h2 {
   font-size: 1.7rem;
 }
+body .story .whouse h2 br {
+  display: none;
+}
+@media screen and (max-width: 580px) {
+  body .story .whouse h2 {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 510px) {
+  body .story .whouse h2 br {
+    display: block;
+  }
+}
 body .story .whouse p {
   font-size: 1.2rem;
   text-align: center;
+}
+@media screen and (max-width: 580px) {
+  body .story .whouse p {
+    font-size: 1rem;
+  }
 }
 body img {
   max-width: 1000px;
@@ -256,6 +284,20 @@ body .forms .text7 {
   display: flex;
   margin-top: 15px;
   gap: 20px;
+}
+@media screen and (max-width: 500px) {
+  body .forms .text7 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 500px) {
+  body .forms .text7 .sivi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
 }
 body .forms .text7 input {
   width: 15px;

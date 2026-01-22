@@ -17,12 +17,13 @@ body .leader {
   width: 100%;
   position: fixed;
   top: 0;
+  z-index: 100;
 }
 body .leader .firstheader {
   display: flex;
   justify-content: space-between;
   background-color: #fafafa;
-  padding: 15px;
+  padding: 13px;
 }
 body .leader .firstheader .input {
   display: flex;
@@ -31,7 +32,7 @@ body .leader .firstheader .input {
 }
 body .leader .firstheader .input .search {
   display: flex;
-  justify-content: center;
+  justify-self: center;
   align-items: center;
 }
 body .leader .firstheader .input input {
@@ -50,6 +51,11 @@ body .leader .firstheader .secondheader {
   max-width: 180px;
   width: 100%;
 }
+@media screen and (max-width: 500px) {
+  body .leader .firstheader .secondheader {
+    display: none;
+  }
+}
 body .leader .firstheader .secondheader button {
   display: flex;
   gap: 10px;
@@ -65,12 +71,16 @@ body .leader .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 17px;
+  padding: 15px;
   background-color: #f2f1f0;
+}
+body .leader .header .burger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
 }
 body .leader .header p {
   font-size: 2rem;
-  font-family: Arial, Helvetica;
 }
 body .leader .header ul {
   display: flex;
@@ -98,6 +108,11 @@ body .social {
   right: 1.5%;
   top: 50%;
 }
+@media screen and (max-width: 500px) {
+  body .social {
+    display: none;
+  }
+}
 body .social ul {
   display: flex;
   flex-direction: column;
@@ -124,6 +139,11 @@ body .shop .filter {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+@media screen and (max-width: 400px) {
+  body .shop .filter {
+    display: none;
+  }
 }
 body .shop .filter .range {
   width: 220px;
@@ -205,10 +225,20 @@ body .shop main .top-bar .options {
   align-items: center;
   font-size: 1.2rem;
 }
+@media screen and (max-width: 350px) {
+  body .shop main .top-bar .options {
+    font-size: 1rem;
+  }
+}
 body .shop main .top-bar .options select {
   border: none;
   background: transparent;
   font-size: 1.1rem;
+}
+@media screen and (max-width: 350px) {
+  body .shop main .top-bar .options select {
+    font-size: 1rem;
+  }
 }
 body .shop main ul {
   display: grid;
@@ -220,7 +250,7 @@ body .shop main ul {
   body .shop main ul {
     display: grid;
     margin: 0 auto;
-    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    grid-template-columns: repeat(2, minmax(135px, 1fr));
     gap: 20px;
     padding: 15px;
   }
@@ -369,6 +399,20 @@ body .forms .text7 {
   margin-top: 15px;
   gap: 20px;
 }
+@media screen and (max-width: 500px) {
+  body .forms .text7 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 500px) {
+  body .forms .text7 .sivi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+}
 body .forms .text7 input {
   width: 15px;
   height: 15px;
@@ -418,5 +462,46 @@ body footer a {
   body .regist .forms .perent2 {
     display: flex;
     flex-direction: column;
+  }
+}
+@media screen and (max-width: 700px) {
+  body .burger {
+    display: block;
+  }
+}
+body .mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  height: 100vh;
+  background-color: white;
+  transition: 0.4s ease;
+  z-index: 9999;
+  padding: 40px 20px;
+}
+body .mobile-menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+body .mobile-menu ul a {
+  font-size: 1.5rem;
+  color: black;
+}
+body .mobile-menu.active {
+  right: 0;
+}
+body .close {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 700px) {
+  .burger {
+    display: block !important;
   }
 }/*# sourceMappingURL=product.css.map */

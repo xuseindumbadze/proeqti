@@ -13,6 +13,7 @@ body {
   flex-flow: column;
   align-items: center;
   justify-content: center;
+  font-family: "domine", serif;
 }
 body .leader {
   max-width: 1350px;
@@ -53,6 +54,11 @@ body .leader .firstheader .secondheader {
   max-width: 180px;
   width: 100%;
 }
+@media screen and (max-width: 500px) {
+  body .leader .firstheader .secondheader {
+    display: none;
+  }
+}
 body .leader .firstheader .secondheader button {
   display: flex;
   gap: 10px;
@@ -71,9 +77,14 @@ body .leader .header {
   padding: 15px;
   background-color: #f2f1f0;
 }
+body .leader .header .burger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
 body .leader .header p {
   font-size: 2rem;
-  font-family: Arial, Helvetica;
+  flex: 1;
 }
 body .leader .header ul {
   display: flex;
@@ -101,6 +112,11 @@ body .social {
   right: 1.5%;
   top: 50%;
 }
+@media screen and (max-width: 500px) {
+  body .social {
+    display: none;
+  }
+}
 body .social ul {
   display: flex;
   flex-direction: column;
@@ -125,11 +141,15 @@ body .img {
 body .img h1 {
   font-size: 6rem;
   color: #fff;
-  font-family: Arial, Helvetica;
 }
 @media screen and (max-width: 700px) {
   body .img h1 {
     font-size: 3rem;
+  }
+}
+@media screen and (max-width: 340px) {
+  body .img h1 {
+    font-size: 2rem;
   }
 }
 body .img p {
@@ -150,29 +170,40 @@ body .img a:hover {
 body .img a span {
   color: #fff;
 }
-body .box {
+body .box11 {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-flow: column;
-  height: 40vh;
+  min-height: 20vw;
   max-width: 1350px;
   width: 100%;
   background-color: white;
-  margin: 9px 0;
+  padding: 19px;
 }
-body .box h2 {
+@media screen and (max-width: 400px) {
+  body .box11 {
+    padding: 15px;
+  }
+}
+body .box11 h2 {
   font-size: 2rem;
 }
-body .box p {
+@media screen and (max-width: 400px) {
+  body .box11 h2 {
+    font-size: 1.5rem;
+    padding: 15px 0;
+  }
+}
+body .box11 p {
   margin: 20px 0;
-  font-family: Arial, Helvetica;
   text-align: center;
 }
 body .products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
+  margin-top: 10px;
 }
 @media screen and (max-width: 1365px) {
   body .products {
@@ -181,14 +212,14 @@ body .products {
 }
 @media screen and (max-width: 920px) {
   body .products {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
   }
 }
 body .products .box3 {
   position: relative;
 }
 body .products .box3 .seler {
-  top: 3px;
+  top: 8px;
   left: 15px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.341);
   background-color: black;
@@ -201,7 +232,7 @@ body .products .box6 {
   position: relative;
 }
 body .products .box6 .new {
-  top: 3px;
+  top: 8px;
   left: 15px;
   box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.341);
   background-color: black;
@@ -214,7 +245,7 @@ body .products .box7 {
   position: relative;
 }
 body .products .box7 .sale {
-  top: 3px;
+  top: 8px;
   left: 15px;
   box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.341);
   background-color: black;
@@ -228,6 +259,12 @@ body .products .box {
   align-items: center;
   justify-content: center;
   background-color: #f2f1f0;
+}
+@media screen and (max-width: 920px) {
+  body .products .box {
+    margin-top: 30px;
+    padding: 0 10px;
+  }
 }
 body .products .box a {
   display: flex;
@@ -250,7 +287,10 @@ body .products .box a span .span {
   color: gray;
 }
 body .products .box img {
-  height: 293px;
+  max-height: 293px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 body .regist {
   margin-top: 40px;
@@ -372,6 +412,20 @@ body .forms .text7 {
   margin-top: 15px;
   gap: 20px;
 }
+@media screen and (max-width: 500px) {
+  body .forms .text7 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 500px) {
+  body .forms .text7 .sivi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+}
 body .forms .text7 input {
   width: 15px;
   height: 15px;
@@ -421,5 +475,46 @@ body footer a {
   body .regist .forms .perent2 {
     display: flex;
     flex-direction: column;
+  }
+}
+@media screen and (max-width: 700px) {
+  body .burger {
+    display: block;
+  }
+}
+body .mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  height: 100vh;
+  background-color: white;
+  transition: 0.4s ease;
+  z-index: 9999;
+  padding: 40px 20px;
+}
+body .mobile-menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+body .mobile-menu ul a {
+  font-size: 1.5rem;
+  color: black;
+}
+body .mobile-menu.active {
+  right: 0;
+}
+body .close {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 700px) {
+  .burger {
+    display: block !important;
   }
 }/*# sourceMappingURL=main.css.map */
