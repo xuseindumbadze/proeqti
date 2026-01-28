@@ -56,8 +56,21 @@
                         <li><a href="../contact/contact.html">contact</a></li>
                     </ul>
                 </nav>
+
+                <div class="burger" id="burger">☰</div>
             </div>
         </header>
+        <div class="mobile-menu" id="mobileMenu">
+          <button class="close" id="closeMenu">✕</button>
+
+          <ul>
+             <li><a href="../main.html">Home</a></li>
+             <li><a href="../products/product.html">Shop</a></li>
+             <li><a href="../about/about.html">About</a></li>
+             <li><a href="../gift/giftcard.html">Gift Card</a></li>
+             <li><a href="../contact/contact.html">Contact</a></li>
+         </ul>
+        </div>
     </div>
 
 
@@ -196,6 +209,21 @@
     <footer>
         <p>&copy;2035 by Ceramic-Studio. Powered and secured by <a href="https://www.wix.com/">Wix</a></p>
     </footer>
+
+
+       <script>
+  const burger = document.getElementById("burger");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenu = document.getElementById("closeMenu");
+
+  burger.addEventListener("click", () => {
+    mobileMenu.classList.add("active");
+  });
+
+  closeMenu.addEventListener("click", () => {
+    mobileMenu.classList.remove("active");
+  });
+    </script>
 </body>
 
 </html>

@@ -4,7 +4,6 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
-  font-family: Arial, sans-serif;
 }
 
 $bgcolor: #fafafa;
@@ -95,6 +94,12 @@ body {
       padding: 15px;
       background-color: #f2f1f0;
 
+      .burger {
+        display: none;
+        font-size: 2rem;
+        cursor: pointer;
+      }
+
       p {
         font-size: 2rem;
         font-family: $font;
@@ -158,6 +163,7 @@ body {
     width: 100%;
     margin-top: 145px;
     gap: 50px;
+    padding: 15px;
 
     .nabeglavi {
       width: 100%;
@@ -169,22 +175,27 @@ body {
       gap: 10px;
       font-size: 1.3rem;
 
-      .zipper{
+      .zipper {
         display: flex;
         gap: 4px;
 
-        button{
-            padding: 5px 8px;
+        button {
+          padding: 5px 8px;
         }
       }
 
-      .mose {
-        padding: 10px 20px;
-        font-size: 1.1rem;
+      .kami {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        .mose {
+          padding: 10px 20px;
+          font-size: 1.1rem;
 
-        &:hover {
-          background-color: rgba(128, 128, 128, 0.173);
-          border: 1px solid rgb(134, 108, 42);
+          &:hover {
+            background-color: rgba(128, 128, 128, 0.173);
+            border: 1px solid rgb(134, 108, 42);
+          }
         }
       }
 
@@ -514,5 +525,52 @@ body {
       align-items: center;
       flex-direction: column;
     }
+  }
+
+  @media screen and (max-width: 700px) {
+    .burger {
+      display: block;
+    }
+  }
+
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    background-color: white;
+    transition: 0.4s ease;
+    z-index: 9999;
+    padding: 40px 20px;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+
+      a {
+        font-size: 1.5rem;
+        color: black;
+      }
+    }
+  }
+
+  .mobile-menu.active {
+    right: 0;
+  }
+
+  .close {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .burger {
+    display: block !important;
   }
 }

@@ -4,7 +4,6 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
-  font-family: Arial, sans-serif;
 }
 
 body {
@@ -475,11 +474,6 @@ body footer a {
   body .regist .forms .perent2 {
     display: flex;
     flex-direction: column;
-  }
-}
-@media screen and (max-width: 700px) {
-  body .burger {
-    display: block;
   }
 }
 body .mobile-menu {

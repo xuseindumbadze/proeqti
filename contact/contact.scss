@@ -1,10 +1,9 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style-type: none;
-    font-family: Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
 }
 
 $bgcolor: #fafafa;
@@ -20,269 +19,567 @@ $maxwidth: 1350px;
 
 
 body {
-    background-color: $hbgcolor;
+  background-color: $hbgcolor;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+
+  .leader {
+    max-width: $maxwidth;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+
+    .firstheader {
+      display: flex;
+      justify-content: space-between;
+      background-color: $bgcolor;
+      padding: 13px;
+
+      .input {
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+
+        .search {
+          display: flex;
+          justify-self: center;
+          align-items: center;
+        }
+
+        input {
+          border: 0;
+          background-color: transparent;
+        }
+      }
+
+      button {
+        font-size: 1.5rem;
+        border: 0;
+        height: 2rem;
+        background-color: transparent;
+      }
+
+      .secondheader {
+        display: flex;
+        gap: 30px;
+        max-width: 180px;
+        width: 100%;
+
+        @media screen and (max-width: 500px) {
+          display: none;
+        }
+
+        button {
+          display: flex;
+          gap: 10px;
+        }
+
+        .svgs {
+          max-width: 40px;
+          max-height: 40px;
+
+          .uefa {
+            font-size: 70px;
+          }
+        }
+      }
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px;
+      background-color: #f2f1f0;
+
+      .burger {
+        display: none;
+        font-size: 2rem;
+        cursor: pointer;
+      }
+
+      p {
+        font-size: 2rem;
+        font-family: $font;
+      }
+
+      ul {
+        display: flex;
+
+        li {
+          margin: 15px;
+
+          .don {
+            color: #967e54;
+          }
+
+          a {
+            text-decoration: none;
+            font-size: 20px;
+            color: black;
+
+            &:hover {
+              color: #967e54;
+              transition: 0.3s;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .social {
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
+    position: fixed;
+    z-index: 911;
+    right: 1.5%;
+    top: 50%;
+
+    @media screen and (max-width: 500px) {
+      display: none;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      img {
+        width: 30px;
+      }
+    }
+  }
+
+  .didube {
+    margin-top: 115px;
+    max-width: $maxwidth;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 50px 0;
+  }
+
+  .saburtalo {
+    max-width: $maxwidth;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 20px;
 
+    .mikro {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 120px;
+      max-width: $maxwidth;
+      width: 100%;
 
-    .leader {
-        max-width: $maxwidth;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        z-index: 100;
+      .options {
+        display: flex;
+        align-items: center;
+        font-size: 1.2rem;
 
-
-
-        .firstheader {
-            display: flex;
-            justify-content: space-between;
-            background-color: $bgcolor;
-            padding: 13px;
-
-
-            .input {
-                display: flex;
-                align-items: center;
-                font-size: 1.5rem;
-
-                .search {
-                    display: flex;
-                    justify-self: center;
-                    align-items: center;
-                }
-
-                input {
-                    border: 0;
-                    background-color: transparent;
-                }
-            }
-
-
-            button {
-                font-size: 1.5rem;
-                border: 0;
-                height: 2rem;
-                background-color: transparent;
-            }
-
-            .secondheader {
-                display: flex;
-                gap: 30px;
-                max-width: 180px;
-                width: 100%;
-
-                button {
-                    display: flex;
-                    gap: 10px;
-                }
-
-                .svgs {
-                    max-width: 40px;
-                    max-height: 40px;
-
-                    .uefa {
-                        font-size: 70px;
-                    }
-                }
-            }
-
-
+        label {
+          text-align: right;
         }
+
+        select {
+          border: none;
+          background: transparent;
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    .digomi {
+      display: flex;
+      gap: 30px;
+
+      @media screen and (max-width: 750px) {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 50px;
+      }
+
+      .calendar {
+        width: 320px;
+        font-family: sans-serif;
+        padding: 10px;
 
         .header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 15px;
-            background-color: #f2f1f0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 12px;
 
+          .arrow {
+            font-size: 20px;
+            cursor: pointer;
+          }
 
-
-            p {
-                font-size: 2rem;
-                font-family: $font;
-            }
-
-            ul {
-                display: flex;
-
-                li {
-                    margin: 15px;
-
-                    .don {
-                        color: #967e54;
-                    }
-
-                    a {
-                        text-decoration: none;
-                        font-size: 20px;
-                        color: black;
-
-                        &:hover {
-                            color: #967e54;
-                            transition: 0.3s;
-                        }
-                    }
-                }
-            }
+          .title {
+            font-weight: 600;
+          }
         }
-    }
 
-    .didube {
-        margin-top: 145px;
-        max-width: $maxwidth;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
-        padding: 50px 0;
-    }
+        .weekdays {
+          display: grid;
+          grid-template-columns: repeat(7, 1fr);
+          text-align: center;
+          margin-bottom: 10px;
+          font-size: 14px;
+        }
 
-    .saburtalo {
-        max-width: $maxwidth;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
+        .days {
+          display: grid;
+          grid-template-columns: repeat(7, 1fr);
+          gap: 8px;
 
-        .mikro {
+          .day {
+            height: 44px;
             display: flex;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
-            align-items: center;
-            gap: 120px;
-            max-width: $maxwidth;
-            width: 100%;
+            cursor: pointer;
 
-            .options {
-                display: flex;
-                align-items: center;
-                font-size: 1.2rem;
-
-                label {
-                    text-align: right;
-                }
-
-
-                select {
-                    border: none;
-                    background: transparent;
-                    font-size: 1.1rem;
-                }
+            .dot {
+              width: 4px;
+              height: 4px;
+              background: #0b3c49;
+              border-radius: 50%;
+              margin-top: 4px;
             }
+
+            &.active {
+              background: #0b3c49;
+              color: #fff;
+              border-radius: 6px;
+
+              .dot {
+                background: #fff;
+              }
+            }
+
+            &.muted {
+              color: #cfcfcf;
+            }
+          }
+        }
+      }
+
+      .aviabiletebi {
+        width: 360px;
+        font-family: sans-serif;
+
+        .somxeti {
+          font-size: 16px;
+          margin-bottom: 16px;
+          text-align: center;
         }
 
-        .digomi {
-            display: flex;
-            gap: 30px;
+        .azerbaijani {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 12px;
+          padding: 10px;
+          width: 100%;
 
-            .calendar {
-                width: 320px;
-                font-family: sans-serif;
-                padding: 10px;
 
-                .header {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    margin-bottom: 12px;
+          .time-btn {
+            height: 48px;
+            border: 1px solid #666;
+            background: #fff;
+            font-size: 16px;
+            cursor: pointer;
 
-                    .arrow {
-                        font-size: 20px;
-                        cursor: pointer;
-                    }
-
-                    .title {
-                        font-weight: 600;
-                    }
-                }
-
-                .weekdays {
-                    display: grid;
-                    grid-template-columns: repeat(7, 1fr);
-                    text-align: center;
-                    margin-bottom: 10px;
-                    font-size: 14px;
-                }
-
-                .days {
-                    display: grid;
-                    grid-template-columns: repeat(7, 1fr);
-                    gap: 8px;
-
-                    .day {
-                        height: 44px;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
-                        cursor: pointer;
-
-                        .dot {
-                            width: 4px;
-                            height: 4px;
-                            background: #0b3c49;
-                            border-radius: 50%;
-                            margin-top: 4px;
-                        }
-
-                        &.active {
-                            background: #0b3c49;
-                            color: #fff;
-                            border-radius: 6px;
-
-                            .dot {
-                                background: #fff;
-                            }
-                        }
-
-                        &.muted {
-                            color: #cfcfcf;
-                        }
-                    }
-                }
+            &:hover {
+              background: #f2f2f2;
             }
 
-            .aviabiletebi {
-                width: 360px;
-                font-family: sans-serif;
-
-                .somxeti {
-                    font-size: 16px;
-                    margin-bottom: 16px;
-                }
-
-                .azerbaijani {
-                    display: grid;
-                    grid-template-columns: repeat(2, 1fr);
-                    gap: 12px;
-
-                    .time-btn {
-                        height: 48px;
-                        border: 1px solid #666;
-                        background: #fff;
-                        font-size: 16px;
-                        cursor: pointer;
-
-                        &:hover {
-                            background: #f2f2f2;
-                        }
-
-                        &.active {
-                            background: #2f5560;
-                            color: #fff;
-                            border-color: #2f5560;
-                        }
-                    }
-                }
+            &.active {
+              background: #2f5560;
+              color: #fff;
+              border-color: #2f5560;
             }
+          }
         }
-
+      }
     }
+  }
+
+  .regist {
+    margin-top: 40px;
+    max-width: $maxwidth;
+    width: 100%;
+    background-color: #fff;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    font-size: 1.2rem;
+
+    @media screen and (max-width: 700px) {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      margin: 0;
+    }
+
+    .info {
+      display: flex;
+      justify-content: space-between;
+      flex-flow: column;
+      gap: 50px;
+
+      .child1 {
+        a {
+          text-decoration: none;
+          color: black;
+        }
+
+        .p1 {
+          margin-bottom: 60px;
+        }
+      }
+
+      .child3 {
+        margin-bottom: 65px;
+
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+  }
+
+  .forms {
+    display: flex;
+    flex-flow: column;
+    max-width: 370px;
+    width: 100%;
+
+    .perent {
+      display: flex;
+      gap: 50px;
+
+      .text1 {
+        display: flex;
+        flex-flow: column;
+        gap: 40px;
+      }
+
+      .text2 {
+        display: flex;
+        flex-flow: column;
+        gap: 40px;
+      }
+
+      input {
+        border-left: none;
+        border-top: none;
+        border-right: none;
+        outline: none;
+      }
+    }
+
+    .perent2 {
+      display: flex;
+      gap: 50px;
+      margin-top: 20px;
+
+      .text3 {
+        display: flex;
+        flex-flow: column;
+        gap: 40px;
+      }
+
+      .text4 {
+        display: flex;
+        flex-flow: column;
+        gap: 40px;
+      }
+
+      input {
+        border-left: none;
+        border-top: none;
+        border-right: none;
+        outline: none;
+      }
+    }
+
+    .text5 {
+      display: flex;
+      flex-flow: column;
+      margin-top: 20px;
+
+      textarea {
+        border-left: none;
+        border-top: none;
+        border-right: none;
+        height: 70px;
+        outline: none;
+      }
+
+      button {
+        border: 0;
+        height: 2rem;
+        font-size: 1.3rem;
+        background-color: #fff;
+        padding: 30px;
+      }
+    }
+
+    .text6 {
+      display: flex;
+      flex-flow: column;
+      margin-top: 70px;
+
+      input {
+        margin-top: 20px;
+        height: 40px;
+        width: auto;
+      }
+    }
+
+    .text7 {
+      display: flex;
+      margin-top: 15px;
+      gap: 20px;
+
+      @media screen and (max-width: 500px) {
+        display: flex;
+        flex-direction: column;
+      }
+      .sivi {
+        @media screen and (max-width: 500px) {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+        }
+      }
+
+      input {
+        width: 15px;
+        height: 15px;
+      }
+
+      button {
+        background-color: black;
+        color: white;
+        margin-left: 30px;
+        padding: 10px 30px;
+        font-size: 1.2rem;
+        border: 0;
+
+        &:hover {
+          background-color: #967e54;
+        }
+      }
+    }
+  }
+
+  .mapi {
+    max-width: $maxwidth;
+    width: 100%;
+    height: 60vh;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    font-size: 1.1rem;
+    padding: 35px;
+    margin-top: 20px;
+
+    a {
+      color: black;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .header {
+      nav {
+        display: none;
+      }
+    }
+
+    footer {
+      font-size: 1rem;
+    }
+
+    .regist {
+      .info {
+        display: flex;
+
+        flex-flow: column;
+        gap: 50px;
+      }
+
+      .forms {
+        .perent {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .perent2 {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    background-color: white;
+    transition: 0.4s ease;
+    z-index: 9999;
+    padding: 40px 20px;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+
+      a {
+        font-size: 1.5rem;
+        color: black;
+      }
+    }
+  }
+
+  .mobile-menu.active {
+    right: 0;
+  }
+
+  .close {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .burger {
+    display: block !important;
+  }
 }
