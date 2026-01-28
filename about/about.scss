@@ -91,6 +91,12 @@ body {
       padding: 15px;
       background-color: #f2f1f0;
 
+      .burger {
+        display: none;
+        font-size: 2rem;
+        cursor: pointer;
+      }
+
       p {
         font-size: 2rem;
         font-family: $font;
@@ -165,7 +171,7 @@ body {
 
       h2 {
         font-size: 1.7rem;
-        br{
+        br {
           display: none;
         }
 
@@ -174,7 +180,7 @@ body {
         }
 
         @media screen and (max-width: 510px) {
-          br{
+          br {
             display: block;
           }
         }
@@ -185,7 +191,7 @@ body {
         text-align: center;
 
         @media screen and (max-width: 580px) {
-          font-size:1rem;
+          font-size: 1rem;
         }
       }
     }
@@ -418,5 +424,46 @@ body {
         }
       }
     }
+  }
+
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    background-color: white;
+    transition: 0.4s ease;
+    z-index: 9999;
+    padding: 40px 20px;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+
+      a {
+        font-size: 1.5rem;
+        color: black;
+      }
+    }
+  }
+
+  .mobile-menu.active {
+    right: 0;
+  }
+
+  .close {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .burger {
+    display: block !important;
   }
 }
