@@ -178,6 +178,10 @@ body {
     gap: 200px;
     font-size: 1.2rem;
 
+    @media screen and (max-width: 900px) {
+      gap: 100px;
+    }
+
     @media screen and (max-width: 700px) {
       display: flex;
       flex-flow: column;
